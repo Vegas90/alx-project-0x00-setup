@@ -11,7 +11,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default function Home() {
+const Home: React.FC = () => {
+  // This component serves as the main page of the Next.js application.
+  // It uses the Geist and Geist_Mono fonts from Google Fonts.
+  // The page includes a header with the Next.js logo, a list of instructions,
+  // and links to deploy the app on Vercel and read the Next.js documentation.
+  // The layout is responsive, adjusting for different screen sizes.
+  // The footer contains links to learn more about Next.js and explore examples.  
   return (
     <div
       className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
@@ -113,3 +119,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;
